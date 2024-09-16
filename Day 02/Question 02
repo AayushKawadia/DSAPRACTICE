@@ -1,0 +1,31 @@
+#Simple Interest Logic
+SI = P*R*t/100
+
+Code- 
+#include <iostream>
+using namespace std;
+
+int main() {
+    float principal, rate, time, simpleInterest;
+
+    cout << "Enter the principal amount: ";
+    cin >> principal;
+
+    cout << "Enter the rate of interest (per annum): ";
+    cin >> rate;
+
+    cout << "Enter the time (in years): ";
+    cin >> time;
+
+    // Calculate simple interest
+    simpleInterest = (principal * rate * time) / 100;
+
+    cout << "The simple interest is: " << simpleInterest << endl;
+    return 0;
+}
+
+Output - 
+Enter the principal amount: 50
+Enter the rate of interest (per annum): 6
+Enter the time (in years): 3
+The simple interest is: 9
