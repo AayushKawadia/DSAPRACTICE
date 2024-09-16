@@ -1,0 +1,37 @@
+#Celsius to Fahrenheit
+
+#include <iostream>
+using namespace std;
+int main() {
+    float celsius, fahrenheit;
+    cout << "Enter temperature in Celsius: ";
+    cin >> celsius;
+
+    // Conversion formula
+    fahrenheit = (celsius * 9 / 5) + 32;
+
+    cout << celsius << " Celsius is equal to " << fahrenheit << " Fahrenheit.\n";
+    return 0;
+}
+Output - 
+Enter temperature in Celsius: 5
+5 Celsius is equal to 41 Fahrenheit.
+
+
+#Fahrenheit to Celsius
+#include <iostream>
+using namespace std;
+int main() {
+    float fahrenheit, celsius;
+    cout << "Enter temperature in Fahrenheit: ";
+    cin >> fahrenheit;
+
+    // Conversion formula
+    celsius = (fahrenheit - 32) * 5 / 9;
+
+    cout << fahrenheit << " Fahrenheit is equal to " << celsius << " Celsius.\n";
+    return 0;
+}
+Output -
+Enter temperature in Fahrenheit: 50
+50 Fahrenheit is equal to 10 Celsius.
