@@ -1,0 +1,44 @@
+#Is number prime or not
+
+Logic-
+1. If 𝑛<=1, it's not prime.
+2. If 𝑛 = 2, it's prime (the only even prime number).
+3. If n is divisible by 2, it's not prime.
+
+By Naive Method -
+
+#include <iostream>
+using namespace std;
+
+bool isPrime(int n) {
+    // Edge cases
+    if (n <= 1) return false;  // 0 and 1 are not prime numbers
+    if (n == 2 || n == 3) return true;  // 2 and 3 are prime numbers
+
+    // Check for factors from 2 to n-1
+    for (int i = 2; i < n; ++i) {
+        if (n % i == 0) return false;  // If divisible by any number other than 1 and itself
+    }
+
+    return true;  // No divisors found, so it is prime
+}
+
+int main() {
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+
+    if (isPrime(number)) {
+        cout << number << " is a prime number." << endl;
+    } else {
+        cout << number << " is not a prime number." << endl;
+    }
+
+    return 0;
+}
+
+output - 
+Enter a number: 5
+5 is a prime number.
+Enter a number: 6
+6 is not a prime number.
