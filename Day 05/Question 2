@@ -1,0 +1,57 @@
+# FullFancy12 Pattern
+
+#include <iostream>
+using namespace std;
+
+void fancy12(int n) {
+    for (int i = 0; i < n; i++) {
+        // Print the pattern for the ith row
+        for (int j = 0; j < 2 * i + 1; j++) {
+            if (j % 2 == 0)
+                cout << i + 1;  // Print the number (i + 1)
+            else
+                cout << "*";    // Print the asterisk (*)
+        }
+        cout << endl;  // Move to the next line after each row
+    }
+}
+
+void fullfancy12(int n) {
+    // Print the upper part using fancy12
+    fancy12(n);
+
+    n--;  // Decrease n for the inverted part
+
+    // Print the inverted part
+    for (int i = 0; i < n; i++) {
+        // Print the pattern for the ith row of the inverted part
+        for (int j = 0; j < 2 * (n - i) - 1; j++) {
+            if (j % 2 == 0)
+                cout << n - i;  // Print the number (n - i)
+            else
+                cout << "*";    // Print the asterisk (*)
+        }
+        cout << endl;  // Move to the next line after each row
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+    fullfancy12(n);
+    return 0;
+}
+
+
+Output - 
+Enter the value of n: 5
+1
+2*2
+3*3*3
+4*4*4*4
+5*5*5*5*5
+4*4*4*4
+3*3*3
+2*2
+1
