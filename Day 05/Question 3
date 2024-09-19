@@ -1,0 +1,42 @@
+# ABCBA Pattern
+
+#include <iostream>
+using namespace std;
+
+void ABCBA(int n) {
+    for (int i = 0; i < n; i++) {
+        char ch = 'A'; // Initialize character to 'A'
+        
+        for (int j = 0; j < i + 1; j++) {
+            cout << ch;
+            ch++;
+        }
+        
+        ch--;
+        
+        // Print decreasing characters
+        while (ch > 'A') {
+            ch--;
+            cout << ch;
+        }
+        
+        cout << endl; // Move to the next line after printing one row
+    }
+}
+
+int main() {
+    int n;
+    cout << "Enter the number of lines: ";
+    cin >> n; 
+    ABCBA(n);
+    return 0; 
+}
+
+
+Output - 
+Enter the number of lines: 5
+A
+ABA
+ABCBA
+ABCDCBA
+ABCDEDCBA
