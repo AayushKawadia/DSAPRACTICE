@@ -1,0 +1,29 @@
+# Count number of zero and one
+
+#include<iostream>
+using namespace std;
+
+void printZeroesAndOnes(int arr[], int n){
+    int zeroCount = 0;
+    int oneCount = 0;
+
+    for(int i=0; i<n; i++){
+      int CurrentElement = arr[i];
+      if(CurrentElement == 0){
+          zeroCount++;
+      }
+      if(CurrentElement == 1){
+          oneCount++;
+      }
+  }
+cout << "Total number of zeroes:"<< zeroCount<<endl;
+cout << "Total number of ones:"<< oneCount << endl;
+}
+
+int main(){
+  int arr[] = {0,1,1,1,0,0,1};
+  int size = 7;
+  printZeroesAndOnes(arr,size);
+
+  return 0;
+}
