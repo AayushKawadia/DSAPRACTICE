@@ -1,4 +1,4 @@
-# Count number of zero and ones
+# Extreme Number Printing
 
 #include<iostream>
 using namespace std;
